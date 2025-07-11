@@ -1,5 +1,4 @@
 # Kubernetes-Horizontal-Pod-Autoscaling
-# Kubernetes-Horizontal-Pod-Autoscaling
 
 This project demonstrates a simple Node.js application designed to simulate CPU load and serve as a practical example for Kubernetes Horizontal Pod Autoscaling (HPA).
 
