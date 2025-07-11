@@ -1,0 +1,18 @@
+# service.yaml allows traffic to be routed to the application pods
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-api-service
+  namespace: node-space
+spec:
+  # selector defines how the service finds which pods to route traffic to
+  # It matches the labels of the pods created by the deployment
+  selector:
+    app: node-app
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.containerPort }}
+      nodePort: {{ .Values.service.nodePort }}
+  type: {{ .Values.service.type }}
+  # This service will route traffic to the pods with the label app=node-app

@@ -1,0 +1,16 @@
+replicaCount: 3
+
+image:
+  repository: node-app
+  # pullPolicy defines how the image is pulled
+  pullPolicy: Never
+
+service:
+  # type defines the type of service to create
+  type: NodePort
+  # port allows service to service traffic on the specified port
+  port: 80
+  # containerPort is the port on which the container listens
+  containerPort: 3000
+  # nodePort the external port opened on the node(host machine)
+  nodePort: 30001
