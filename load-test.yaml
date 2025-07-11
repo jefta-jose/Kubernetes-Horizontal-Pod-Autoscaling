@@ -18,8 +18,8 @@ config:
       rampTo: 1
       name: cool down
 
-  scenarios:
-    - name: load-test
-      flow:
-        - get:
-            url: "/cpu"
+scenarios:
+  - name: load-test
+    flow:
+      - get:
+          url: "/cpu"
